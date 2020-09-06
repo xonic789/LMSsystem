@@ -18,14 +18,53 @@
     		text-align: center;
     	}
     	.table{
-    		width:400px;
+    		font-size:20px;
+    		width:1000px;
+    		
     	}
     	.buttns{
     		text-align: center;	
+    		cellpadding:0px;
     	}
     	.tsub{
-    		width:300px;
+    		width:500px;
+    		height: 50px;
     	}
+    	.bt{
+    		text-align: center;
+    	}
+    	input{
+    		font-size:20px;
+    		border:0px;
+    		width: 100%;
+    		height: 100%;
+    	}
+    	select{
+    		font-size:20px;
+    		border:0px;
+    		width:100%;
+    		height: 100%;
+    	}
+    	textarea{
+    		font-size:20px;
+    		border-radius:5px;
+    		border:0.5px;
+    		width:100%;
+    		height: 100%;
+    	}
+    	@media screen and (max-width: 1200px) {
+    		.table{
+	    		font-size:20px;
+	    		width:600px;
+	    	}
+	    	.thd{
+	    		width: 120px;
+	    	}
+	    	.tsub{
+	    		width:300px;
+	    		height: 50px;
+    		}
+		}
     	
     	
     </style>
@@ -52,7 +91,7 @@
 	<div id="content">
 	<h2>취업 공고 상세 페이지</h2>
 		<!--content start  -->
-		<form method="post">
+		<form method="post" enctype="multipart/form-data">
 		<table class="table">
 		<input type="hidden" name="recruitmentboardIdx" value="${bean.recruitmentboardIdx }"/>
 		<input type="hidden" name="writerIdx" value="${bean.writerIdx }"/>
@@ -72,6 +111,18 @@
 			<th class="thd">모집 내용</th>
 			<td class="tsub"><textarea id="postContent" name="postContent" cols="20" rows="10" style="resize: none;" required></textarea></td>
 		</tr>
+		<c:if test="${bean.fileSrc ne null and bean.fileSrc ne \"null\"}">
+		<tr class="row">
+			<th class="thd">첨부 파일</th>
+			<td class="tsub"><button class="buttn" type="button"><a class="an" href="../download.bit?file=${bean.fileSrc }&adminpage=${bean.recruitmentboardIdx}">다운로드</a></button>
+							 <button class="buttn" type="button"><a class="an" href="filedelete.bit?file=${bean.fileSrc }&idx=${bean.recruitmentboardIdx}">삭제</a></button>
+			</td>
+		</tr>
+		</c:if>
+		<c:if test="${bean.fileSrc eq null }">
+			<th class="thd">첨부 파일</th>
+			<td class="tsub"><input type="file" id="file1" name="file1"/></td>
+		</c:if>
 		</table>
 		<div class="buttns">
 			<button class="buttn" type="button">뒤로</button>
@@ -79,7 +130,7 @@
 		</div>
 		</form>
 		
-		<!--content end  -->
+		<!-- content end  -->
 	</div>
 <%@ include file="../template/adminfooter.jspf" %>
 </body>

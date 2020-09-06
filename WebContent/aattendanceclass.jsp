@@ -68,7 +68,7 @@ var getUrlParameter = function getUrlParameter(sParam) {
 		String classTitle = (String)request.getAttribute("classTitle");
 		ArrayList<AttendanceDto> list = (ArrayList<AttendanceDto>)request.getAttribute("list");
 	//	System.out.println(list);
-		
+		classTitle = new String(classTitle.getBytes("iso-8859-1"),"utf-8");
 		SimpleDateFormat format1 = new SimpleDateFormat("yyyy-MM-dd");
 		Date time = new Date();
 		String now = format1.format(time);

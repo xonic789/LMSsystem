@@ -95,7 +95,7 @@
 	<div id="content">
 	<h2>취업 공고 등록 페이지</h2>
 		<!--content start  -->
-		<form method="post">
+		<form method="post" enctype="multipart/form-data">
 		<table class="table">
 		<tr class="row">
 			<th class="thd">기업명</th>
@@ -112,6 +112,10 @@
 		<tr class="row">
 			<th class="thd">모집 내용</th>
 			<td class="tsub"><textarea id="postContent" name="postContent" cols="20" rows="10" style="resize: none;" required></textarea></td>
+		</tr>
+		<tr class="row">
+			<th class="thd">첨부 파일</th>
+			<td class="tsub"><input type="file" id="file1" name="file1"/></td>
 		</tr>
 		</table>
 		<div class="buttns">
