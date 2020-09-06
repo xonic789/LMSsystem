@@ -5,13 +5,14 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>성적 입력 페이지</title>
     <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Noto+Sans+KR:wght@100;500&display=swap" rel="stylesheet"/>
     <link href="../css/atemplate.css" rel="stylesheet" type="text/css"/>
     <link href="../css/butan.css" rel="stylesheet" type="text/css"/>
     <style rel="stylesheet" type="text/css">
     	h2{
+    		margin-top: 20px;
     		text-align: center;
     	}
     </style>
@@ -30,7 +31,7 @@
 	<h2>성적 입력 페이지</h2> <!-- 반 선택 -->
 
 		<!--content start  -->
-		<table class="table">
+		<table class="table" style="width: 90%;">
 			<tr class="title row">
 				<th class="thd">성적데이터를 입력 하실 교육과정/반을 선택해주세요.</th>
 			</tr>

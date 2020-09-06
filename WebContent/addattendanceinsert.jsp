@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>출석 수정 페이지</title>
 <link rel="stylesheet" type="text/css" href="../css/butan.css"/>
 <link rel="stylesheet" type="text/css" href="../css/atemplate.css"/>
 <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet"/>
@@ -13,7 +13,7 @@
 <style rel="stylesheet" type="text/css">
 	
 	#content{
-		margin-top:100px;
+		margin-top: 20px;
 		text-align: center;
 		width: 1000px;
 	}
@@ -89,7 +89,7 @@ var getUrlParameter = function getUrlParameter(sParam) {
 	<input type="date" value="${today }" min="2019-01-01" max="${now }" id="date" name="today">
 	<input type="hidden" name="classIdx" value="${classIdx }">
 	<input type="hidden" name="classTitle" value="${classTitle }">
-	<table class="table">
+	<table class="table" style="width: 90%;">
 	
 	 <tr class="title row">
 	 	<th class="thd">이름</th>

@@ -150,9 +150,13 @@
 			int cnt=0;
 			for(int i=0;i<list.size();i++){cnt=i/10+1;
 			if(i%10==0){
-		%>	
+		%>	<%if(name==null){ %>
+			
 			<a class="an pagean" href="application.bit?idx=<%=(i/10)%>&name=<%=name%>"><%=(i/10)+1 %></a>
-		<%}} %>
+			<%}else{%>
+			<a class="an pagean" href="application.bit?idx=<%=(i/10)%>&name=<%=new String(name.getBytes("iso-8859-1"),"utf-8")%>"><%=(i/10)+1 %></a>
+			
+		<%}}} %>
 		</div>
 		<!-- <table class="table detail">
 			<tr class="row">

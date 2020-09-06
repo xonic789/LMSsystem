@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>성적 입력 페이지</title>
 <link rel="stylesheet" type="text/css" href="../css/butan.css"/>
 <link rel="stylesheet" type="text/css" href="../css/atemplate.css"/>
 <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet"/>
@@ -13,7 +13,7 @@
 <style rel="stylesheet" type="text/css">
 	
 	#content{
-		margin-top:100px;
+		margin-top: 20px;
 		text-align: center;
 		width: 1000px;
 	}
@@ -26,7 +26,6 @@
 	input{
 		margin-top: 10px;
 	}
-	
 </style>
 <script type="text/javascript" src="../js/jquery-1.12.4.js"></script>
 <script type="text/javascript" src="../js/buttonjs.js"></script>
@@ -38,6 +37,12 @@ $(document).ready(function(){
 	
 	$('#enrollSubject').click(function(){
 		$('.subject').val($('#subjectText').val());
+	});
+	
+	$('#subjectText').keydown(function(event){
+	     if(event.keyCode == 13){
+	    	 $('.subject').val($('#subjectText').val());
+	     }
 	});
 
 });
@@ -77,7 +82,7 @@ function checkInput(form) {
 
 <div id="content">
 <!-- content start -->
-	<h2>성적 수정 페이지 - ${classTitle }</h2>
+	<h2>성적 입력 페이지 - ${classTitle }</h2>
 	
 	
 	<input type="text" placeholder="과목명을 입력해주세요." id="subjectText" />
@@ -86,7 +91,7 @@ function checkInput(form) {
 	<form method="post" onsubmit="return checkInput(this);">
 	<input type="hidden" name="classIdx" value="${classIdx }">
 	<input type="hidden" name="classTitle" value="${classTitle }">
-	<table class="table">
+	<table class="table" style=" width: 90%;">
 	
 	 <tr class="title row">
 	 	<th class="thd">학생이름</th>

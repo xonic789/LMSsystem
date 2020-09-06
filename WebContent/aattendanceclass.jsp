@@ -5,29 +5,24 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>반별 출석 관리 페이지</title>
 <link rel="stylesheet" type="text/css" href="../css/butan.css"/>
 <link rel="stylesheet" type="text/css" href="../css/atemplate.css"/>
 <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Noto+Sans+KR:wght@100;500&display=swap" rel="stylesheet"/>
 <style rel="stylesheet" type="text/css">
-	
 	#content{
-		margin-top:100px;
+		margin-top: 20px;
 		text-align: center;
 		width: 1000px;
 	}
-	
 	#etc{
 		padding:0px;
 		height: 50px;
-		
 	}
 	input{
 		margin-top:10px;
 	}
-	
-	
 </style>
 <script type="text/javascript" src="../js/jquery-1.12.4.js"></script>
 <script type="text/javascript" src="../js/buttonjs.js"></script>
@@ -86,7 +81,7 @@ var getUrlParameter = function getUrlParameter(sParam) {
 	<h2>반별 출석 관리 페이지 - ${classTitle }</h2>
 
 	<input type="date" value="${today }" min="2019-01-01" max="${now }" id="date">
-	<table class="table">
+	<table class="table" style="width: 90%;">
 	
 	 <tr class="title row">
 	 	<th class="thd">날짜</th>

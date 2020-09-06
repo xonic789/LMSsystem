@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>출석 관리 페이지</title>
     <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Noto+Sans+KR:wght@100;500&display=swap" rel="stylesheet"/>
     <link href="../css/atemplate.css" rel="stylesheet" type="text/css"/>
@@ -13,7 +13,9 @@
     <style rel="stylesheet" type="text/css">
     	h2{
     		text-align: center;
+    		margin-top: 20px;
     	}
+
     </style>
 	<script type="text/javascript" src="../js/jquery-1.12.4.js"></script>
 	<script type="text/javascript" src="../js/menu.js"></script>
@@ -36,7 +38,7 @@
 		pageContext.setAttribute("today", today);
 	%>
 		<!--content start  -->
-		<table class="table">
+		<table class="table" style="width: 90%;">
 			<tr clas="title row">
 				<th class="thd">출석데이터를 확인 하실 교육과정/반을 선택해주세요.</th>
 			</tr>

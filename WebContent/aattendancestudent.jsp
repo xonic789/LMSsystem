@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>학생별 출석 관리 페이지</title>
 <link rel="stylesheet" type="text/css" href="../css/butan.css"/>
 <link rel="stylesheet" type="text/css" href="../css/atemplate.css"/>
 <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet"/>
@@ -13,7 +13,7 @@
 <style rel="stylesheet" type="text/css">
 	
 	#content{
-		margin-top:100px;
+		margin-top:20px;
 		text-align: center;
 		width: 1000px;
 	}
@@ -56,7 +56,7 @@ $(document).ready(function(){
 	<h3>${classTitle } - ${studentName }</h3>
 	<c:if test="${attendRate >= 80.0 }"><span style="color: blue;">출석률: ${attendRate }</span></c:if>
 	<c:if test="${attendRate < 80.0 }"><span style="color: red;">출석률: ${attendRate }</span></c:if>
-	<table class="table">
+	<table class="table" style="width: 90%;">
 	 <tr class="title row">
 	 	<th class="thd">날짜</th>
 	 	<th class="thd">출석상태</th>
